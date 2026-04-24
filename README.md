@@ -1,70 +1,190 @@
-# Getting Started with Create React App
+# 🍳 Modern Cooking & Recipe Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Developed by Lavanya J
 
-## Available Scripts
+This is a high-fidelity React prototype for a Cultural Recipe Documentation and Guided Cooking application. It features AI-powered recipe extraction, a community moderation flow, and an immersive step-by-step cooking mode.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 How to Run the App on Windows
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to get the project running on your laptop:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Install Node.js
 
-### `npm test`
+If you don't have it yet, download and install the **LTS version** from:
+https://nodejs.org/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Extract and Open
 
-### `npm run build`
+* Unzip the project folder
+* Open **Command Prompt** or **PowerShell**
+* Navigate to the project folder:
+  cd path/to/your/extracted-folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Install Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run this command to download all the necessary UI libraries (Ant Design, Icons, Router):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 🧪 Application Test Plan & Validation Guide
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This document outlines the end-to-end functional validation scenarios for the application. Each test case includes actions and expected outcomes to ensure feature completeness, UX consistency, and system integrity.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Test 1: Global Boot & Strict Login
 
-## Learn More
+**Action:**
+Refresh your browser on any page (e.g., localhost:3000/login)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Expected Result:**
+The orange/magenta gradient Splash Screen appears as a global overlay for 2.5 seconds before fading out to reveal the page.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Action:**
+Try logging in with a random email and password
 
-### Code Splitting
+**Expected Result:**
+An error message appears stating "Invalid email or password"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Action:**
+Log in with [user@test.com](mailto:user@test.com) and password user
 
-### Analyzing the Bundle Size
+**Expected Result:**
+A success message appears, and you are taken to the standard User Dashboard.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔐 Test 2: Onboarding & Mandatory Verification
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Action:**
+Logout and click "Sign up". Fill in the details and click "Create Account"
 
-### Advanced Configuration
+**Expected Result:**
+You are taken to the Verify Your Email screen. The "Continue (Demo)" button is gone.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Action:**
+Click "I have clicked the link"
 
-### Deployment
+**Expected Result:**
+The button displays a loading spinner and "Checking status..." for 2 seconds before showing a success checkmark and redirecting you.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📄 Test 3: Interactive Uploads & AI Extraction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Action:**
+Tap the Add (+) tab and select Upload Document
+
+**Expected Result:**
+The "Extract Recipe using AI" button is greyed out and disabled.
+
+**Action:**
+Tap the dashed box and select a file from your computer
+
+**Expected Result:**
+A success toast appears, the box turns green, and the "Extract Recipe" button turns bright orange and becomes clickable.
+
+**Action:**
+Go back and try Record Voice. Tap the orange circle to record, then tap again to stop
+
+**Expected Result:**
+The timer stops, and the "Transcribe & Extract" button becomes active only after the recording is finished.
+
+---
+
+## 🔍 Test 4: User Search, Filters, & UI Fixes
+
+**Action:**
+Tap the Recipes tab
+
+**Action:**
+Enter a search term (e.g., "Tacos") or use the Filter icon to select a cuisine (e.g., "Mexican") and click "Apply Filters"
+
+**Expected Result:**
+The list dynamically updates to show only matching recipes. A yellow badge appears on the filter icon showing the number of active filters.
+
+**Action:**
+Click on "Authentic Mexican Tacos" to open the detail view
+
+**Expected Result:**
+Scroll to the bottom. The "Prepare to Cook" button is now fully visible and sits beautifully above the bottom navigation bar.
+
+---
+
+## 🍳 Test 5: Cooking Mode & Voice Synthesis
+
+**Action:**
+From the Recipe Detail, click "Prepare to Cook" and then "Start Cooking"
+
+**Expected Result:**
+You enter the new step-by-step Cooking Mode with a progress bar and navigation dots.
+
+**Action:**
+Click the blue "Voice Hint" button
+
+**Expected Result:**
+Your browser actually speaks the current cooking step out loud.
+
+**Action:**
+Tap the "Next Step" button until you reach the end
+
+**Expected Result:**
+You see the new "Master Chef" completion screen with your 5-star rating and achievement badges.
+
+---
+
+## ⚙️ Test 6: Settings Persistence & Security
+
+**Action:**
+Go to Profile > Settings. Toggle Dark Mode on and change the Font Size to "Large"
+
+**Expected Result:**
+The UI theme and text scale update instantly.
+
+**Action:**
+Refresh your browser
+
+**Expected Result:**
+The app reloads with your Dark Mode and Large Font settings still active.
+
+**Action:**
+Click "Change Password". Enter a simple password like "123"
+
+**Expected Result:**
+The checklist below shows red "X" icons because the password doesn't meet the Regex requirements (min 8 chars, uppercase, lowercase, and number).
+
+**Action:**
+Enter a strong password (e.g., "Heritage2026")
+
+**Expected Result:**
+All requirements show green checkmarks.
+
+---
+
+## 🛠️ Test 7: Admin Moderate Logic
+
+**Action:**
+Logout and login as [admin@test.com](mailto:admin@test.com) with password admin
+
+**Action:**
+Go to Moderate Recipes and click the green "Approve" button on a recipe
+
+**Expected Result:**
+A success toast appears. Go back to the Admin Dashboard. The "Pending Review" count has decreased, and "Approved Recipes" has increased.
+
+---
+
+## ✅ Summary
+
+This test suite ensures:
+
+* Authentication strictness
+* End-to-end onboarding validation
+* AI-assisted feature enablement
+* Dynamic UI responsiveness
+* State persistence across sessions
+* Role-based administrative workflows
