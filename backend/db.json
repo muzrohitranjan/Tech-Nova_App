@@ -1,0 +1,123 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user@test.com",
+      "password": "user",
+      "name": "John Doe",
+      "isAdmin": false
+    },
+    {
+      "id": 2,
+      "email": "admin@test.com",
+      "password": "admin",
+      "name": "Admin User",
+      "isAdmin": true
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Punjabi Chole Bhature",
+      "img": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=400&q=80",
+      "time": "1 hour",
+      "servings": "4 servings",
+      "diff": "Medium",
+      "diffColor": "#D48806",
+      "diffBg": "#FFFBE6",
+      "desc": "A classic North Indian and Punjabi dish of spicy chickpeas served with fried bread.",
+      "story": "A beloved street food and Sunday breakfast staple across North India, offering a perfect balance of spices and textures.",
+      "ingredients": ["2 cups Chickpeas (Chole)", "4 Bhature (fried bread)", "2 Onions, finely chopped", "3 Tomatoes, pureed", "Punjabi Chole Masala", "Ginger-garlic paste", "Fresh coriander"],
+      "steps": ["Soak chickpeas overnight and pressure cook until soft", "Sauté onions and ginger-garlic paste until golden", "Add tomato puree and chole masala, cook until oil separates", "Mix in the boiled chickpeas and simmer for 15 minutes", "Fry the bhature dough in hot oil until puffed", "Serve hot, garnished with coriander and onions"],
+      "rating": 4.9,
+      "cookedCount": 2840,
+      "status": "approved"
+    },
+    {
+      "id": 2,
+      "title": "Kerala Chicken Curry",
+      "img": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=80",
+      "time": "45 mins",
+      "servings": "6 servings",
+      "diff": "Easy",
+      "diffColor": "#FF7E27",
+      "diffBg": "#FFF0E6",
+      "desc": "A family recipe passed down through generations in Kerala, South Indian cuisine.",
+      "story": "A family recipe passed down through generations in Kerala, India. It brings back memories of Sunday family lunches and is best served with hot parottas.",
+      "ingredients": ["1kg Chicken", "2 Onions", "4 Tomatoes", "Ginger-garlic paste", "Curry spices", "Coconut milk", "Curry leaves"],
+      "steps": ["Marinate chicken with turmeric and salt", "Sauté onions and ginger-garlic paste until golden", "Add tomatoes and curry spices, cook until oil separates", "Add the chicken and sear on all sides", "Pour in coconut milk and simmer for 25 minutes", "Garnish with fresh curry leaves and serve hot"],
+      "rating": 4.8,
+      "cookedCount": 3100,
+      "status": "approved"
+    },
+    {
+      "id": 3,
+      "title": "Hyderabadi Dum Biryani",
+      "img": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=400&q=80",
+      "time": "2 hours",
+      "servings": "6 servings",
+      "diff": "Hard",
+      "diffColor": "#CF1322",
+      "diffBg": "#FFF1F0",
+      "desc": "A traditional recipe from Hyderabad, India, a pinnacle of South Indian and Hyderabadi cooking.",
+      "story": "This rich, aromatic biryani uses a slow-cooking 'dum' method to trap the steam, infusing the basmati rice with exotic spices and tender meat.",
+      "ingredients": ["2 cups Basmati Rice", "500g Chicken", "Saffron strands", "Whole spices (cardamom, cloves, cinnamon)", "Crispy fried onions", "Ghee"],
+      "steps": ["Soak rice for 30 minutes", "Marinate meat in yogurt and spices overnight", "Parboil rice with whole spices", "Layer meat and rice in a heavy-bottomed pot", "Top with saffron milk and fried onions", "Seal pot and slow-cook on low heat for 45 mins"],
+      "rating": 5.0,
+      "cookedCount": 1520,
+      "status": "approved"
+    },
+    {
+      "id": 4,
+      "title": "Bengali Fish Curry",
+      "img": "https://images.unsplash.com/photo-1599020792689-9fde4588c052?auto=format&fit=crop&w=400&q=80",
+      "time": "40 mins",
+      "servings": "4 servings",
+      "diff": "Medium",
+      "diffColor": "#D48806",
+      "diffBg": "#FFFBE6",
+      "desc": "A traditional Bengali dish made with fresh river fish and mustard paste.",
+      "story": "A staple in every Bengali household. The pungent aroma of mustard oil and paste gives this curry its signature flavor, perfectly paired with steamed white rice.",
+      "ingredients": ["500g Rohu or Katla Fish", "3 tbsp Mustard oil", "2 tbsp Mustard paste", "1 tsp Turmeric", "Green chilies", "Panch Phoron (5 spice blend)"],
+      "steps": ["Marinate fish with salt and turmeric", "Lightly fry the fish in mustard oil and set aside", "Temper the remaining oil with Panch Phoron and green chilies", "Add water, turmeric, and mustard paste to form a light gravy", "Gently slide the fried fish into the simmering gravy", "Cook for 5-7 minutes and serve with steamed rice"],
+      "rating": 4.7,
+      "cookedCount": 940,
+      "status": "approved"
+    },
+    {
+      "id": 5,
+      "title": "Authentic Mexican Tacos",
+      "img": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=150&q=80",
+      "time": "30 mins",
+      "servings": "4 servings",
+      "diff": "Easy",
+      "diffColor": "#FF7E27",
+      "diffBg": "#FFF0E6",
+      "desc": "Classic Mexican street tacos with marinated meat and fresh toppings.",
+      "story": "A traditional family recipe from Mexico City, passed down through generations.",
+      "ingredients": ["500g Steak", "Corn tortillas", "Onions, chopped", "Cilantro", "Lime", "Salsa verde"],
+      "steps": ["Marinate steak with lime and spices", "Grill steak to medium rare", "Warm tortillas on the grill", "Chop onions and cilantro", "Assemble tacos with meat and toppings", "Serve with lime wedges and salsa"],
+      "rating": 4.6,
+      "cookedCount": 1200,
+      "status": "pending"
+    },
+    {
+      "id": 6,
+      "title": "Grandmother's Special Biryani",
+      "img": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=150&q=80",
+      "time": "2 hours",
+      "servings": "6 servings",
+      "diff": "Medium",
+      "diffColor": "#D48806",
+      "diffBg": "#FFFBE6",
+      "desc": "A traditional recipe from Hyderabad, India, a pinnacle of South Indian and Hyderabadi cooking.",
+      "story": "This rich, aromatic biryani uses a slow-cooking 'dum' method to trap the steam, infusing the basmati rice with exotic spices and tender meat.",
+      "ingredients": ["2 cups Basmati Rice", "500g Chicken", "Saffron strands", "Whole spices (cardamom, cloves, cinnamon)", "Crispy fried onions", "Ghee"],
+      "steps": ["Soak rice for 30 minutes", "Marinate meat in yogurt and spices overnight", "Parboil rice with whole spices", "Layer meat and rice in a heavy-bottomed pot", "Top with saffron milk and fried onions", "Seal pot and slow-cook on low heat for 45 mins"],
+      "rating": 4.9,
+      "cookedCount": 800,
+      "status": "pending"
+    }
+  ]
+}
+
